@@ -60,15 +60,3 @@ func (u *User) ToJson() ([]byte, error) {
 	return data, nil
 
 }
-
-// Validate register
-
-func Validate(u *RegisterInfo) (bool, []byte, error) {
-	found := new(User)
-	if ok := len(found.Lname) >= 3 || len(found.Fname) >= 3; !ok {
-		return false, []byte(`user.Validate: Invalid Name`), errors.New("error")
-	}
-
-	return true, []byte("user.Validate: Success"), nil
-
-}
