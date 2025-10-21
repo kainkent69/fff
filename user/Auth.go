@@ -13,7 +13,6 @@ var (
 )
 
 func Login(data RegisterAuth) error {
-
 	return nil
 }
 
